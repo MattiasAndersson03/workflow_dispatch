@@ -15,3 +15,5 @@ jobs:
       - name: Print Input
         run: |
           echo "Test input value: ${{ github.event.inputs.test_input }}"
+
+# Test          
