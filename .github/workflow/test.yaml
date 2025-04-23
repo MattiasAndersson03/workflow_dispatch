@@ -1,0 +1,16 @@
+name: Test Manual Trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_input:
+        description: 'A test input value'
+        required: true
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Input
+        run: |
+          echo "Test input value: ${{ github.event.inputs.test_input }}"
